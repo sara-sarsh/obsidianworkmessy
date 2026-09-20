@@ -1,0 +1,21 @@
+{
+  "dailyNotesFolderPath": "/persian_dates/days",
+  "weeklyNotesFolderPath": "/persian_dates/weeks",
+  "monthlyNotesFolderPath": "/persian_dates/months",
+  "yearlyNotesFolderPath": "/persian_dates/years",
+  "enableQuarterlyNotes": true,
+  "quarterlyNotesFolderPath": "/persian_dates/seasons",
+  "dateFormat": "persian",
+  "version": "3.0.2",
+  "timeoutDuration": 1250,
+  "announceUpdates": true,
+  "showGeorgianDates": true,
+  "hijriDateAdjustment": -1,
+  "showHijriDates": true,
+  "weekendDays": "friday",
+  "showHolidays": true,
+  "showOfficialIranianCalendar": true,
+  "showAncientIranianCalendar": true,
+  "showShiaCalendar": true,
+  "hijriCalendarType": "iran"
+}

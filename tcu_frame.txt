@@ -1,0 +1,35 @@
+enum charge_limiter_t {
+	charge_limiter_charger_max_current,
+	charge_limiter_battery_max_current,
+	
+	charge_limiter_charger_max_power,
+	charge_limiter_owner_max_power,
+	
+	charge_limiter_len
+};
+typedef enum {
+	charge_status_disconnect,		//gun is disconnected
+	charge_status_pluged,				//gun is connected ==> wait for start form uplink
+	charge_status_started,			//start received ==> initializing can communication, start handshaking, exchange charge parameters
+	charge_status_connected,		//				==>  
+	charge_status_locked,				//gun locked by station ==> request for closing battery contactor 
+	charge_status_checking,
+	
+	
+	
+}charge_status_tcu_t; 
+charge_status_tcu_t charge_status_tcu1 = charge_status_disconnect;
+charge_status_tcu_t charge_status_tcu2 = charge_status_disconnect;
+struct tcu_send_frame_t {
+	int gun;
+	charge_status_tcu_t charge_status_tcu;
+	float voltage, current, soc, battery_voltage, demand_current;
+	float res_p, res_n, temp_p, temp_n, cells_mean_v, cells_mean_temp;
+	uint8_t charge_mode;
+	uint64_t charge_time;
+	uint64_t used_energy;
+	enum charge_limiter_t charge_limiter;
+	uint8_t dual_power;
+	uint32_t errors, warns, internal_errors, internal_warns;
+	uint8_t sc;
+};

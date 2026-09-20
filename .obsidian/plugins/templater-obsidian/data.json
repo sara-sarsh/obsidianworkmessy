@@ -1,0 +1,50 @@
+{
+  "command_timeout": 5,
+  "templates_folder": "Template",
+  "templates_pairs": [
+    [
+      "",
+      ""
+    ]
+  ],
+  "trigger_on_file_creation": true,
+  "auto_jump_to_cursor": true,
+  "enable_system_commands": false,
+  "shell_path": "",
+  "user_scripts_folder": "scripts",
+  "enable_folder_templates": true,
+  "folder_templates": [
+    {
+      "folder": "01_Inbox",
+      "template": "Template/Fleeting Note- Use when you quickly read something or have an idea..md"
+    },
+    {
+      "folder": "02_Zettel",
+      "template": "Template/Permanent Zettel - Core Knowledge- This is the most important one. One note = One idea..md"
+    },
+    {
+      "folder": "03_Projects",
+      "template": "Template/Project Template.md"
+    },
+    {
+      "folder": "persian_dates/days",
+      "template": "Template/daily journal template.md"
+    }
+  ],
+  "enable_file_templates": false,
+  "file_templates": [
+    {
+      "regex": "/01_inbox/.*",
+      "template": "Template/Fleeting Note- Use when you quickly read something or have an idea..md"
+    }
+  ],
+  "syntax_highlighting": true,
+  "syntax_highlighting_mobile": false,
+  "enabled_templates_hotkeys": [
+    ""
+  ],
+  "startup_templates": [
+    ""
+  ],
+  "intellisense_render": 1
+}

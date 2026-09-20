@@ -1,0 +1,9 @@
+{
+  "interfaceFontFamily": "Inter,IRNazanin,Apple SD Gothic Neo",
+  "textFontFamily": "IRNazanin",
+  "baseFontSize": 25,
+  "baseFontSizeAction": true,
+  "enabledCssSnippets": [
+    "two-column"
+  ]
+}

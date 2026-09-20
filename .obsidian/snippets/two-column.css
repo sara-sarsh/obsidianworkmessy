@@ -1,0 +1,52 @@
+/* 1. The Main Container (Holds everything) */
+.callout[data-callout="layout"] {
+    background: transparent;
+    border: none;
+    padding: 0;
+    box-shadow: none;
+    margin: 0;
+}
+.callout[data-callout="layout"] > .callout-title {
+    display: none; /* Hides the default callout title */
+}
+.callout[data-callout="layout"] > .callout-content {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+}
+
+/* 2. The Left Column (Justified Text) */
+.callout[data-callout="left-col"] {
+    flex: 1;
+    background: transparent;
+    border: none;
+    padding: 0;
+    box-shadow: none;
+    margin: 0;
+    text-align: justify;       /* Justifies the text */
+    text-justify: inter-word;
+}
+.callout[data-callout="left-col"] > .callout-title {
+    display: none;
+}
+
+/* 3. The Right Column (Code) */
+.callout[data-callout="right-col"] {
+    flex: 1;
+    background: transparent;
+    border: none;
+    padding: 0;
+    box-shadow: none;
+    margin: 0;
+}
+.callout[data-callout="right-col"] > .callout-title {
+    display: none;
+}
+
+/* 4. Mobile Stacking */
+@media (max-width: 750px) {
+    .callout[data-callout="layout"] > .callout-content {
+        flex-direction: column;
+    }
+}

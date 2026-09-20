@@ -1,0 +1,1 @@
+scp -r orangepi@192.168.0.105:/home/orangepi/evck-build/opt/evck/dist/evck-ocpp-v1.73.tar.gz "C:\Users\Danesh\Documents\Sara\Top\buildingthedeb"

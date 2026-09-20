@@ -1,0 +1,29 @@
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Obsidian settings that should be local (not synced)
+.obsidian/workspace
+.obsidian/workspace.json
+.obsidian/workspace-mobile
+.obsidian/workspace-mobile.json
+
+# Cache and temporary files
+.obsidian/cache/
+.obsidian/cache.json
+.trash/
+
+# Agent/AI data specific to this machine
+.agents/
+.smart-env/
+.gemini/
+
+# Plugins containing bundled keys/OAuth secrets that trigger GitHub Push Protection
+.obsidian/plugins/remotely-save/
+.obsidian/plugins/smart-connections/
