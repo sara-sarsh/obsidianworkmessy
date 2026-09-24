@@ -31,12 +31,12 @@ sudo sh -c 'echo 257 > /sys/class/gpio/unexport' 2>/dev/null || true
 ## ۴. ورود میکروکنترلر به حالت ISP Bootloader
 ```bash
 # فعال کردن پین‌های Reset و Boot
-sudo gpioset gpiochip0 262=1
+sudo gpioset gpiochip0 264=1
 sudo gpioset gpiochip0 261=1
 sleep 0.1
 
 # رهاسازی Reset (میکرو وارد بوت‌لودر ISP می‌شود)
-sudo gpioset gpiochip0 262=0
+sudo gpioset gpiochip0 264=0
 sleep 0.1
 
 # رهاسازی پین Boot
@@ -55,11 +55,9 @@ sudo gpioset gpiochip0 257=0
 cd /opt/evck/tools/RemoteProgramTest
 sudo lpc21isp -wipe -verify -hex Charger_CCU_Test_1.hex /dev/ttyS5 38400 12000
 
-cd /opt/evck/tools/RemoteProgramTest
-sudo lpc21isp -wipe -verify -hex Charger_CCU_9.4.hex /dev/ttyS5 38400 12000
 
-cd /opt/evck/tools/RemoteProgramTest
-sudo lpc21isp -wipe -verify -hex Charger_CCU_9.3ccs2.hex /dev/ttyS5 38400 12000
+sudo lpc21isp -wipe -verify -hex /opt/evck/tools/remote_program/RemoteProgramTest/Charger_CCU_Test_2.hex /dev/ttyS5 38400 12000
+
 
 sudo lpc21isp -wipe -verify -hex /opt/evck/tools/Charger_CCU_V9.2.hex /dev/ttyS5 38400 12000
 ```

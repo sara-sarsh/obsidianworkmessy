@@ -137,6 +137,8 @@ sudo tailscale up --authkey="tskey-auth-XXXXXX" --hostname="techno-4" --ssh --re
 ```
 دستگاه **در ۲ ثانیه بدون هیچ تایید مرورگری** آنلاین شده و آی‌پی می‌گیرد!
 tskey-auth-kDYvhTURqZ11CNTRL-jAXXPm2cSFYLyigpLRTbFYVoyCsx6my74
+
+sudo tailscale up --authkey="tskey-auth-kDYvhTURqZ11CNTRL-jAXXPm2cSFYLyigpLRTbFYVoyCsx6my74" --hostname="vahid" --ssh --reset
 ---
 
 ### مرحله ۳: افزودن مخزن رسمی جهت آپدیت منظم با APT (اختیاری ولی توصیه شده)
