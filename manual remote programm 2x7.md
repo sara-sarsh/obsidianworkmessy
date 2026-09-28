@@ -1,7 +1,14 @@
 # Manual Remote Programming Guide (LPC via lpc21isp)
 
+
+### transfer the hex file to the distination (scp)
+
+"C:\Users\Danesh\Documents\Sara\Tesla\keil_sara\2x7keilprj\Objects\2x7_LPC_Code_v1.0.3.hex" orangepi@192.168.10.116:/opt/evck/tools/RemoteProgramTest/
+2x7_LPC_Code_v1.0.3.hex
 ## ۱. نصب و کامپایل ابزار lpc21isp (در صورت عدم نصب قبلی)
 ```bash
+
+
 cd /tmp
 git clone https://github.com/capiman/lpc21isp.git
 cd lpc21isp
@@ -57,19 +64,13 @@ sleep 0.1
 sudo gpioset gpiochip0 261=0 
 ```
 
-reset
-```
-sudo gpioset gpiochip0 262=1 &
-sleep 0.1
-sudo gpioset gpiochip0 262=0 
-```
-
 ## ۵. پروگرم کردن فایل Hex با ابزار lpc21isp
 توجه: فایل `.hex` به تنهایی اجراشدنی نیست و باید به عنوان ورودی به `lpc21isp` داده شود:
 
 ```bash
 cd /opt/evck/tools/RemoteProgramTest
-sudo lpc21isp -wipe -verify -hex Charger_CCU_Test_1.hex /dev/ttyS5 38400 12000
+sudo lpc21isp -wipe -verify -hex 2x7_LPC_Code_v1.3.hex /dev/ttyS5 38400 12000
+sudo lpc21isp -wipe -verify -hex 2x7_LPC_Code_v1.0.3.hex /dev/ttyS5 38400 12000
 
 
 sudo lpc21isp -wipe -verify -hex /opt/evck/tools/remote_program/RemoteProgramTest/Charger_CCU_Test_2.hex /dev/ttyS5 38400 12000
@@ -87,13 +88,14 @@ sudo lpc21isp -wipe -verify -hex /opt/evck/tools/RemoteProgramTest/Charger_CCU_T
 ## ۶. خروج از ISP و ریستارت میکرو جهت اجرای برنامه عادی
 ```bash
 # اطمینان از خاموش بودن Boot
-sudo gpioset gpiochip0 261=0
-
-# اعمال پالس Reset به میکرو
-sudo gpioset gpiochip0 262=1
-sleep 0.2
+sudo gpioset gpiochip0 261=0 &
+sudo gpioset gpiochip0 262=1 &
+sleep 0.2 &
 sudo gpioset gpiochip0 262=0
 
 # راه‌اندازی مجدد سرویس سیستم در صورت نیاز
 sudo systemctl start evck-lpc.service
 ```
+
+note to me:
+261 is boot and 262 is reset
