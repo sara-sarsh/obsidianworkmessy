@@ -31,12 +31,12 @@ sudo sh -c 'echo 257 > /sys/class/gpio/unexport' 2>/dev/null || true
 ## ۴. ورود میکروکنترلر به حالت ISP Bootloader
 ```bash
 # فعال کردن پین‌های Reset و Boot
-sudo gpioset gpiochip0 264=1
-sudo gpioset gpiochip0 261=1
+sudo gpioset gpiochip0 262=1 &
+sudo gpioset gpiochip0 261=1 &
 sleep 0.1
 
 # رهاسازی Reset (میکرو وارد بوت‌لودر ISP می‌شود)
-sudo gpioset gpiochip0 264=0
+sudo gpioset gpiochip0 262=0
 sleep 0.1
 
 # رهاسازی پین Boot
@@ -46,7 +46,23 @@ sudo gpioset gpiochip0 261=0
 sudo gpioset gpiochip0 257=0
 ```
 
----
+## auto (farhad) for 2x7
+enter boot mode
+```
+sudo gpioset gpiochip0 262=1 &
+sudo gpioset gpiochip0 261=1 &
+sleep 0.1
+sudo gpioset gpiochip0 262=0 &
+sleep 0.1
+sudo gpioset gpiochip0 261=0 
+```
+
+reset
+```
+sudo gpioset gpiochip0 262=1 &
+sleep 0.1
+sudo gpioset gpiochip0 262=0 
+```
 
 ## ۵. پروگرم کردن فایل Hex با ابزار lpc21isp
 توجه: فایل `.hex` به تنهایی اجراشدنی نیست و باید به عنوان ورودی به `lpc21isp` داده شود:
