@@ -70,7 +70,7 @@ sudo gpioset gpiochip0 261=0
 ```bash
 cd /opt/evck/tools/RemoteProgramTest
 sudo lpc21isp -wipe -verify -hex 2x7_LPC_Code_v1.3.hex /dev/ttyS5 38400 12000
-sudo lpc21isp -wipe -verify -hex 2x7_LPC_Code_v1.0.3.hex /dev/ttyS5 38400 12000
+sudo lpc21isp -wipe -verify -hex 2x7_LPC_Code_v1.0.6.hex /dev/ttyS5 38400 12000
 
 
 sudo lpc21isp -wipe -verify -hex /opt/evck/tools/remote_program/RemoteProgramTest/Charger_CCU_Test_2.hex /dev/ttyS5 38400 12000
@@ -89,11 +89,10 @@ sudo lpc21isp -wipe -verify -hex /opt/evck/tools/RemoteProgramTest/Charger_CCU_T
 ```bash
 # اطمینان از خاموش بودن Boot
 sudo gpioset gpiochip0 261=0 &
-sudo gpioset gpiochip0 262=1 &
+sudo gpioset gpiochip0  262=1 &
 sleep 0.2 &
 sudo gpioset gpiochip0 262=0
 
-# راه‌اندازی مجدد سرویس سیستم در صورت نیاز
 sudo systemctl start evck-lpc.service
 ```
 

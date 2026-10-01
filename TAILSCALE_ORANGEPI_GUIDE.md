@@ -133,11 +133,16 @@ sudo systemctl status tesla_charge.service
 روی اورنج‌پای فقط کافی است دستور زیر را اجرا کنید (به جای `tskey-auth-XXXX` کلید مرحله ۱ و به جای `techno-4` نام دستگاه):
 
 ```bash
-sudo tailscale up --authkey="tskey-auth-XXXXXX" --hostname="techno-4" --ssh --reset
+sudo tailscale up --authkey="tskey-auth-XXXXXX" --hostname="yazd-1" --ssh --reset
 ```
 دستگاه **در ۲ ثانیه بدون هیچ تایید مرورگری** آنلاین شده و آی‌پی می‌گیرد!
 tskey-auth-kDYvhTURqZ11CNTRL-jAXXPm2cSFYLyigpLRTbFYVoyCsx6my74
 
+
+
+
+
+sudo tailscale up --authkey="tskey-auth-kDYvhTURqZ11CNTRL-jAXXPm2cSFYLyigpLRTbFYVoyCsx6my74" --hostname="yazd-1" --ssh --reset
 sudo tailscale up --authkey="tskey-auth-kDYvhTURqZ11CNTRL-jAXXPm2cSFYLyigpLRTbFYVoyCsx6my74" --hostname="vahid" --ssh --reset
 ---
 
@@ -200,3 +205,6 @@ bash setup_tailscale.sh techno-5
 ```
 
 </div>
+
+
+https://ts-mirror.xedge.cc/stable/debian/pool/
