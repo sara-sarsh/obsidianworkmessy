@@ -71,7 +71,7 @@ sudo gpioset gpiochip0 261=0
 cd /opt/evck/tools/RemoteProgramTest
 sudo lpc21isp -wipe -verify -hex 2x7_LPC_Code_v1.3.hex /dev/ttyS5 38400 12000
 sudo lpc21isp -wipe -verify -hex 2x7_LPC_Code_v1.0.6.hex /dev/ttyS5 38400 12000
-
+sudo lpc21isp -wipe -verify -hex 2x7_LPC_Code_v1.0.7.hex /dev/ttyS5 38400 12000
 
 sudo lpc21isp -wipe -verify -hex /opt/evck/tools/remote_program/RemoteProgramTest/Charger_CCU_Test_2.hex /dev/ttyS5 38400 12000
 
